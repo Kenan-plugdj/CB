@@ -117,7 +117,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/DavidStefansky/Catharsis-Bot/master/langIndex.json', function(json) {
+        $.get('https://rawgit.com/stiefandawidow/CB/master/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -255,9 +255,9 @@
         status: false,
         name: 'Catharsis-Bot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/Catharsis-Bot.js',
+        scriptLink: 'https://rawgit.com/stiefandawidow/CB/master/Catharsis-Bot.js',
         cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/pt-BR.json',
+        chatLink: 'https://rawgit.com/stiefandawidow/CB/master/pt-BR.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -265,8 +265,8 @@
         settings: {
             botName: 'Catharsis-Bot',
             language: 'portuguese',
-            chatLink: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/pt-BR.json',
-            scriptLink: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/Catharsis-Bot.js',
+            chatLink: 'https://rawgit.com/stiefandawidow/CB/master/pt-BR.json',
+            scriptLink: 'https://rawgit.com/stiefandawidow/CB/master/Catharsis-Bot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -329,9 +329,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/OPlist.json',
-                BANNED: 'https://rawgit.com/DavidStefansky/Catharsis-Bot/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/stiefandawidow/CB/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/stiefandawidow/CB/master/OPlist.json',
+                BANNED: 'https://rawgit.com/stiefandawidow/CB/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
