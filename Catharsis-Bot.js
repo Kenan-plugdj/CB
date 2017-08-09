@@ -299,7 +299,7 @@
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: true,
-            thorCooldown: 15,
+            thorCooldown: 10,
             skipPosition: 1,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
@@ -3979,8 +3979,8 @@
                                 indexArrUsedThor,
                                 thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 6) + 1,
-                                worthy = worthyAlg == 6 ? true : false;
+                                worthyAlg = Math.floor(Math.random() * 7) + 1,
+                                worthy = worthyAlg == 7 ? true : false;
 
                             for (var i = 0; i < djlist.length; i++) {
                                 if (djlist[i].id == id)
