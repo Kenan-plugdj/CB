@@ -3624,7 +3624,7 @@
             },
 
             rulesCommand: {
-                command: 'rules',
+                command: 'regras',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
