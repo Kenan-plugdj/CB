@@ -321,7 +321,7 @@
             opLink: null,
             rulesLink: "https://goo.gl/P7N1CV",
             themeLink: null,
-            fbLink: "https://www.facebook.com/groups/1641078129240351/",
+            fbLink: "https://goo.gl/WUZGzz",
             youtubeLink: null,
             website: "https://goo.gl/GwPe67",
             intervalMessages: [],
