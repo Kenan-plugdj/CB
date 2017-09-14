@@ -1807,27 +1807,6 @@
                     }
                 }
             },
-         
-            autoappCommand: {
-                command: 'autoapp',
-                rank: 'bouncer',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.settings.autoapp) {
-                            basicBot.settings.autoapp = !basicBot.settings.autoapp;
-                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autopp}));
-                        }
-                        else {
-                            basicBot.settings.autoapp = !basicBot.settings.autoapp;
-                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autoapp}));
-                        }
-
-                    }
-                }
-            },  
             
             autofavCommand: {
                 command: 'autofav',
@@ -1929,12 +1908,7 @@
                         if (basicBot.settings.autodisable) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
-                        
-                        msg += basicBot.chat.autoapp + ': ';
-                        if (basicBot.settings.autoapp) msg += 'ON';
-                        else msg += 'OFF';
-                        msg += '. ';
-                        
+                                                
                         msg += basicBot.chat.autofav + ': ';
                         if (basicBot.settings.autofav) msg += 'ON';
                         else msg += 'OFF';
