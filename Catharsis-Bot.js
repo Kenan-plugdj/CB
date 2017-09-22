@@ -2297,9 +2297,9 @@
                 command: 'ct',
                 rank: 'user',
                 type: 'startsWith',
-                getcts: function (chat) {
-                    var sho = Math.floor(Math.random() * basicBot.chat.cts.length);
-                    return basicBot.chat.cts[sho];
+                getctes: function (chat) {
+                    var sho = Math.floor(Math.random() * basicBot.chat.ctes.length);
+                    return basicBot.chat.ctes[sho];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2315,7 +2315,7 @@
                             var name = msg.substring(space + 2);
                             var user = basicBot.userUtilities.lookupUserName(name);
                             if (name === "djs") {
-                                return API.sendChat(subChat(basicBot.chat.multict, {namefrom: chat.un, ct: this.getCts()}));
+                                return API.sendChat(subChat(basicBot.chat.multict, {namefrom: chat.un, ct: this.getCtes()}));
                             }
                             else if (user === false || !user.inRoom) {
                                 return API.sendChat(subChat(basicBot.chat.nouserct, {name: name}));
@@ -2324,7 +2324,7 @@
                                 return API.sendChat(subChat(basicBot.chat.selfct, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.ct, {nameto: user.username, namefrom: chat.un, ct: this.getCts()}));
+                                return API.sendChat(subChat(basicBot.chat.ct, {nameto: user.username, namefrom: chat.un, ct: this.getCtes()}));
                             }
                         }
                     }
