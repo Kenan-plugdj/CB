@@ -2293,13 +2293,13 @@
                 }
             },
          
-            ctCommand: {
+            cantadasCommand: {
                 command: 'ct',
                 rank: 'user',
                 type: 'startsWith',
-                getctes: function (chat) {
-                    var sho = Math.floor(Math.random() * basicBot.chat.ctes.length);
-                    return basicBot.chat.ctes[sho];
+                getcantadases: function (chat) {
+                    var sho = Math.floor(Math.random() * basicBot.chat.cantadases.length);
+                    return basicBot.chat.cantadases[sho];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2308,23 +2308,23 @@
                         var msg = chat.message;
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatct);
+                            API.sendChat(basicBot.chat.eatcantadas);
                             return false;
                         }
                         else {
                             var name = msg.substring(space + 2);
                             var user = basicBot.userUtilities.lookupUserName(name);
                             if (name === "djs") {
-                                return API.sendChat(subChat(basicBot.chat.multict, {namefrom: chat.un, ct: this.getCtes()}));
+                                return API.sendChat(subChat(basicBot.chat.multicantadas, {namefrom: chat.un, ct: this.getCantadases()}));
                             }
                             else if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nouserct, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.nousercantadas, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfct, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.selfcantadas, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.ct, {nameto: user.username, namefrom: chat.un, ct: this.getCtes()}));
+                                return API.sendChat(subChat(basicBot.chat.cantadas, {nameto: user.username, namefrom: chat.un, cantadas: this.getCantadases()}));
                             }
                         }
                     }
