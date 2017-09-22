@@ -325,7 +325,7 @@
             website: "https://goo.gl/GwPe67",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/stiefandawidow/CB/master/blacklists/NSFWlist.json',
