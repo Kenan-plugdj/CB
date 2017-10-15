@@ -33,7 +33,7 @@
         clearInterval(basicBot.room.autofavInterval);
         clearInterval(basicBot.room.autofbInterval);
         clearInterval(basicBot.room.autorouletteInterval);
-        clearInterval(basicBot.room.autorulesInterval);
+        clearInterval(basicBot.room.autoregrasInterval);
         basicBot.status = false;
     };
 
@@ -290,7 +290,7 @@
             timeGuard: true,
             maximumSongLength: 8,
             autodisable: false,
-            autofav: false,
+            autofav: true,
             autofb: true,
             autoroulette: true,
             autorules: true,
@@ -315,16 +315,17 @@
             motd: 'Temporary Message of the Day',
             filterChat: false,
             etaRestriction: false,
-            welcome: false,
+            welcome: true,
             opLink: null,
             rulesLink: "https://goo.gl/P7N1CV",
             themeLink: null,
             fbLink: "https://goo.gl/WUZGzz",
+            emotesLink: "https://goo.gl/tZZ4G6",
             youtubeLink: null,
             website: "https://goo.gl/GwPe67",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/stiefandawidow/CB/master/blacklists/NSFWlist.json',
@@ -371,10 +372,10 @@
                     API.sendChat('!roulette');
                 }
             },
-            autorulesInterval: null,
-            autorulesFunc: function () {
-                if (basicBot.status && basicBot.settings.autorules) {
-                    API.sendChat('!rules');
+            autoregrasInterval: null,
+            autoregrasFunc: function () {
+                if (basicBot.status && basicBot.settings.autoregras) {
+                    API.sendChat('!regras');
                 }
             },
             queueing: 0,
@@ -2587,6 +2588,19 @@
                     }
                 }
             },
+       
+            emotesCommand: {
+                command: 'emotes',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        return API.sendChat(subChat(basicBot.chat.emotes));
+                    }
+                }
+            },         
          
             fbCommand: {
                 command: 'fb',
