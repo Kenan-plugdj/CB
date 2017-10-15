@@ -1872,21 +1872,21 @@
                 }
             },
             
-            autorulesCommand: {
-                command: 'autorules',
+            autoregrasCommand: {
+                command: 'autoregras',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (basicBot.settings.autorules) {
-                            basicBot.settings.autorules = !basicBot.settings.autorules;
-                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autorules}));
+                        if (basicBot.settings.autoregras) {
+                            basicBot.settings.autoregras = !basicBot.settings.autoregras;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autoregras}));
                         }
                         else {
-                            basicBot.settings.autorules = !basicBot.settings.autorules;
-                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autorules}));
+                            basicBot.settings.autoregras = !basicBot.settings.autoregras;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autoregras}));
                         }
 
                     }
@@ -1924,8 +1924,8 @@
                         else msg += 'OFF';
                         msg += '. ';
 
-                        msg += basicBot.chat.autorules + ': ';
-                        if (basicBot.settings.autorules) msg += 'ON';
+                        msg += basicBot.chat.autoregras + ': ';
+                        if (basicBot.settings.autoregras) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
 
