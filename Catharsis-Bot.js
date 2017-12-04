@@ -1363,10 +1363,11 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'hu3', 'filho',  'brbr', 'da puta', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
+                'hueh', 'hu3', 'arrombado', 'filho',  'brbr', 'da puta', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 'zueria', 'aehoo', 'aheu', 'porra', 'caralho', 'buceta', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
                 'hitler', 'merda', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'retarda', 'caralho', 'filha', 'ppk',
-                'filho da puta', 'fuder', 'foder', 'hua', 'cú', 'foda', 'pinto', 'desgraça', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+                'filho da puta', 'fuder', 'foder', 'hua', 'cú', 'foda', 'pinto', 'desgraça', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 
+                'arrombada', 'biscate', 'burra', 'safada', 'otario', 'besta', 'cachorra', 'idiota', 'baitola', 'cuzão', 'sonsa', 'foda'
             ],
             curses: [
                 'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
