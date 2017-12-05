@@ -619,25 +619,25 @@
                 var rankInt = null;
                 switch (rankString) {
                     case 'admin':
-                        rankInt = 10;
+                        rankInt = 10000;
                         break;
                     case 'ambassador':
-                        rankInt = 7;
+                        rankInt = 7000;
                         break;
                     case 'host':
-                        rankInt = 5;
+                        rankInt = 5000;
                         break;
                     case 'cohost':
-                        rankInt = 4;
+                        rankInt = 4000;
                         break;
                     case 'manager':
-                        rankInt = 3;
+                        rankInt = 3000;
                         break;
                     case 'bouncer':
-                        rankInt = 2;
+                        rankInt = 2000;
                         break;
                     case 'residentdj':
-                        rankInt = 1;
+                        rankInt = 1000;
                         break;
                     case 'user':
                         rankInt = 0;
@@ -2026,7 +2026,7 @@
 
             banCommand: {
                 command: 'ban',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -3376,7 +3376,7 @@
 
             muteCommand: {
                 command: 'mute',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -3670,7 +3670,7 @@
 
             skipCommand: {
                 command: ['skip', 'smartskip'],
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -3895,7 +3895,7 @@
 
             swapCommand: {
                 command: 'swap',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -4408,7 +4408,7 @@
 
             whoisCommand: {
                 command: 'whois',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
