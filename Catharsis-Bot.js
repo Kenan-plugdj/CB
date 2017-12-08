@@ -519,16 +519,16 @@
                   if (botCreatorIDs.indexOf(u.id) > -1) return 9999;
   
  -                if (u.gRole == 0) return u.role;
-                  if (u.gRole < 3000) return u.role;
+ +                if (u.gRole < 3000) return u.role;
                   else {
                       switch (u.gRole) {
-                          case 3:
+ -                        case 3:
                           case 3000:
                               return (1*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
-                          case 5:
+ -                        case 5:
                           case 5000:
                               return (2*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
-            },
+                      }
             moveUser: function(id, pos, priority) {
                 var user = basicBot.userUtilities.lookupUser(id);
                 var wlist = API.getWaitList();
@@ -4488,19 +4488,20 @@
                                       var rank = 'Host';
                                   }
   
-                                  if ([3, 3000].indexOf(rawrank.gRole) > -1) {
-                                  if (rawrank.gRole == 3000) {
+ -                                if ([3, 3000].indexOf(rawrank.gRole) > -1) {
+ +                                if (rawrank.gRole == 3000) {
                                       var rank = 'Brand Ambassador';
-                                  } else if ([5, 5000].indexOf(rawrank.gRole) > -1) {
-                                  } else if (rawrank.gRole == 5000) {
+ -                                } else if ([5, 5000].indexOf(rawrank.gRole) > -1) {
+ +                                } else if (rawrank.gRole == 5000) {
                                       var rank = 'Admin';
                                   }
-                                var slug = API.getUser(id).slug;
-                                if (typeof slug !== 'undefined') {
-                                    var profile = 'https://plug.dj/@/' + slug;
-                                } else {
-                                    var profile = '~';
-                                }
+  
+                                 var slug = API.getUser(id).slug;
+                                 if (typeof slug !== 'undefined') {
+                                     var profile = 'https://plug.dj/@/' + slug;
+                                 } else {
+                                     var profile = '~';
+                                 }
 
                                 API.sendChat(subChat(basicBot.chat.whois, {
                                     name1: chat.un,
