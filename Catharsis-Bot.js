@@ -512,27 +512,22 @@
                 return votes;
 
             },
-            getPermission: function(obj) { //1 requests
-                var u;
-                if (typeof obj === 'object') u = obj;
-                else u = API.getUser(obj);
-                for (var i = 0; i < botCreatorIDs.length; i++) {
-                    if (botCreatorIDs[i].indexOf(u.id) > -1) return 10;
-                }
-                if (u.gRole < 2) return u.role;
-                else {
-                    switch (u.gRole) {
-                        case 2:
-                            return 7;
-                        case 3:
-                            return 8;
-                        case 4:
-                            return 9;
-                        case 5:
-                            return 10;
-                    }
-                }
-                return 0;
+             getPermission: function(obj) {
+                 var u;
+                 if (typeof obj === 'object') u = obj;
+                  else u = API.getUser(obj);
+                  if (botCreatorIDs.indexOf(u.id) > -1) return 9999;
+  
+ -                if (u.gRole == 0) return u.role;
+                  if (u.gRole < 3000) return u.role;
+                  else {
+                      switch (u.gRole) {
+                          case 3:
+                          case 3000:
+                              return (1*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
+                          case 5:
+                          case 5000:
+                              return (2*(API.ROLE.HOST-API.ROLE.COHOST))+API.ROLE.HOST;
             },
             moveUser: function(id, pos, priority) {
                 var user = basicBot.userUtilities.lookupUser(id);
@@ -619,25 +614,25 @@
                 var rankInt = null;
                 switch (rankString) {
                     case 'admin':
-                        rankInt = 10000;
+                        rankInt = 10;
                         break;
                     case 'ambassador':
-                        rankInt = 7000;
+                        rankInt = 7;
                         break;
                     case 'host':
-                        rankInt = 5000;
+                        rankInt = 5;
                         break;
                     case 'cohost':
-                        rankInt = 4000;
+                        rankInt = 4;
                         break;
                     case 'manager':
-                        rankInt = 3000;
+                        rankInt = 3;
                         break;
                     case 'bouncer':
-                        rankInt = 2000;
+                        rankInt = 2;
                         break;
                     case 'residentdj':
-                        rankInt = 1000;
+                        rankInt = 1;
                         break;
                     case 'user':
                         rankInt = 0;
@@ -4477,24 +4472,29 @@
                                 } else if (rawlang == "nb"){
                                     var language = "Norueguês"
                                 }
-                                var rawrank = API.getUser(id).role;
-                                if (rawrank == '0') {
-                                    var rank = 'User';
-                                } else if (rawrank == '1') {
-                                    var rank = 'Resident DJ';
-                                } else if (rawrank == '2') {
-                                    var rank = 'Bouncer';
-                                } else if (rawrank == '3') {
-                                    var rank = 'Manager'
-                                } else if (rawrank == '4') {
-                                    var rank = 'Co-Host'
-                                } else if (rawrank == '5') {
-                                    var rank = 'Host'
-                                } else if (rawrank == '7') {
-                                    var rank = 'Brand Ambassador'
-                                } else if (rawrank == '10') {
-                                    var rank = 'Admin'
-                                }
+                                 var rawrank = API.getUser(id);
+ 
+                                 if (rawrank.role == API.ROLE.NONE) {
+                                     var rank = 'User';
+                                 } else if (rawrank.role == API.ROLE.DJ) {
+                                     var rank = 'Resident DJ';
+                                 } else if (rawrank.role == API.ROLE.BOUNCER) {
+                                     var rank = 'Bouncer';
+                                 } else if (rawrank.role == API.ROLE.MANAGER) {
+                                     var rank = 'Manager';
+                                 } else if (rawrank.role == API.ROLE.COHOST) {
+                                     var rank = 'Co-Host';
+                                 } else if (rawrank.role == API.ROLE.HOST) {
+                                      var rank = 'Host';
+                                  }
+  
+                                  if ([3, 3000].indexOf(rawrank.gRole) > -1) {
+                                  if (rawrank.gRole == 3000) {
+                                      var rank = 'Brand Ambassador';
+                                  } else if ([5, 5000].indexOf(rawrank.gRole) > -1) {
+                                  } else if (rawrank.gRole == 5000) {
+                                      var rank = 'Admin';
+                                  }
                                 var slug = API.getUser(id).slug;
                                 if (typeof slug !== 'undefined') {
                                     var profile = 'https://plug.dj/@/' + slug;
