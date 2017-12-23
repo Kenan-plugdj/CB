@@ -4,4 +4,4 @@ Edited by Wawel
 
 
 
-javascript:(function(){$.getScript('https://rawgit.com/stiefandawidow/CB/master/Catharsis-Bot.js');})();
+javascript:(function(){$.getScript('https://rawgit.com/Kenan-plugdj/CB/master/Catharsis-Bot.js');})();
