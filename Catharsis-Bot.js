@@ -1358,11 +1358,11 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'hu3', 'arrombado', 'filho',  'brbr', 'da puta', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                'zueria', 'aehoo', 'aheu', 'porra', 'caralho', 'buceta', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'merda', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'retarda', 'caralho', 'filha', 'ppk',
-                'filho da puta', 'fuder', 'foder', 'hua', 'cú', 'foda', 'pinto', 'desgraça', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 
-                'arrombada', 'biscate', 'burra', 'safada', 'otario', 'besta', 'cachorra', 'idiota', 'baitola', 'cuzão', 'sonsa', 'foda'
+                'hueh', 'arrombado', 'filho',  'brbr', 'da puta', 'heu', 'brbr', 'spoder', 'mafia', 'zuera', 'zueira', 'broxa',
+                'zueria', 'aheu', 'porra', 'caralho', 'buceta', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
+                'hitler', 'merda', 'hue', 'merda', 'pqp', 'puta', 'retarda', 'caralho', 'filha', 'ppk', 'teu cu', 'fdp', 'idiota', 'otário', 'otária', 'tapado', 'tonto', 'viadinho',
+                'filho da puta', 'fuder', 'foder', 'hua', 'cú', 'cu', 'rola', 'pau', 'meu pau', 'meu ovo', 'pinto', 'desgraça', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 
+                'arrombada', 'biscate', 'burra', 'safada', 'otario', 'besta', 'cachorra', 'idiota', 'baitola', 'cuzão', 'sonsa', 'gay', 'viado',  'puto','bixa', 'bicha', 'seu cu', 'acéfalo', 'babaca',  
             ],
             curses: [
                 'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
